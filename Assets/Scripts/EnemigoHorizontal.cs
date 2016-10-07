@@ -54,3 +54,4 @@ public class EnemigoHorizontal : MonoBehaviour {
 		transform.position += movimiento * velocidadMovimiento * Time.deltaTime;
 	}
 }
+//la primera subida de Raul!!!
