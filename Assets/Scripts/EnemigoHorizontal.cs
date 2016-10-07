@@ -43,7 +43,7 @@ public class EnemigoHorizontal : MonoBehaviour {
 
 	void FixedUpdate() 
 	{
-		velocidadMovimiento = 30;
+		velocidadMovimiento = 5;
 		if (positivoHorizontal == true) {
 			velocidadHorizontal = 1;
 		} else if (positivoHorizontal == false) {
