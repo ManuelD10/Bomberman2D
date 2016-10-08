@@ -2,28 +2,48 @@
 using System.Collections;
 
 public class GeneradorParedesDes : MonoBehaviour 
-	{
-		public GameObject paredPrefab;
+{
+	public GameObject PrefabBloqueInd;
+	public GameObject PrefabBloqueDes;
 
-		// Use this for initialization
-		void Start () 
+	// Use this for initialization
+	void Start () 
+	{
+		int posX;
+		int posY;
+		int posDesX;
+		int posDesY;
+		for ( int i=0; i<16; i++)
 		{
-			int posX;
-			int posY;
-			int numParedes = 30;
-			for ( int i=0; i<numParedes;i++)
+			for( int j=0; j<6; j++)
 			{
-				//	posX = 2 * Random.Range (-3, 3);
-				//	posY = 2 * Random.Range (-3, 3);
-				posX = Random.Range (-6, 6);
-				posY = Random.Range (-6, 6);
-				Instantiate(paredPrefab, new Vector3(posX,posY), transform.rotation);
+				posX = 2*i;
+				posY = -2*j;
+				var miBloque=Instantiate(PrefabBloqueInd) as GameObject;
+				miBloque.transform.SetParent (transform);
+				miBloque.transform.localPosition = new Vector3 (posX, posY);
+
+				if ( i % 2 != 0) 
+				{ 
+					posX = i;
+					posY=Random.Range(0,-12);
+
+				}
+				else 
+				{
+					posX = i;
+					posY = 2 * Random.Range (0, 15);
+				}
+
+				var otroBloque=Instantiate(PrefabBloqueDes) as GameObject;
+				otroBloque.transform.SetParent (transform);
+				otroBloque.transform.localPosition = new Vector3 (posX, posY);
+					
+					
+
+
 			}
 		}
-
-		// Update is called once per frame
-		void Update () {
-		
-		}
 	}
+}
 
