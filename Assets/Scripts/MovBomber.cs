@@ -15,8 +15,8 @@ public class MovBomber : MonoBehaviour {
 	}
 
 	void FixedUpdate(){
-		velocidadMovimiento = 2;
-		var movimiento = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+		velocidadMovimiento = 3;
+		var movimiento = new Vector3(Mathf.Round(Input.GetAxis("Horizontal")), Mathf.Round(Input.GetAxis("Vertical")), 0);
 		transform.position += movimiento * velocidadMovimiento * Time.deltaTime;
 	}
 }
