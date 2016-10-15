@@ -3,18 +3,10 @@ using System.Collections;
 
 public class MovBomber : MonoBehaviour {
 
-<<<<<<< Updated upstream
-	// Use this for initialization
-	void Start () {
-
-	}
-	float velocidadMovimiento;
-
-
-	void Update () {
-=======
 	private Animator miAnimator;
 	float velocidadMovimiento;
+	// Use this for initialization
+
 
 	// Use this for initialization
 	void Start () 
@@ -75,7 +67,6 @@ public class MovBomber : MonoBehaviour {
 				miAnimator.SetBool ("caminarIzquierda", true);
 			}
 		}
->>>>>>> Stashed changes
 
 	}
 
@@ -84,8 +75,4 @@ public class MovBomber : MonoBehaviour {
 		var movimiento = new Vector3(Mathf.Round(Input.GetAxis("Horizontal")), Mathf.Round(Input.GetAxis("Vertical")), 0);
 		transform.position += movimiento * velocidadMovimiento * Time.deltaTime;
 	}
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes
