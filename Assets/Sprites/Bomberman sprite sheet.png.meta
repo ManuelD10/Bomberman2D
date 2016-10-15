@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 guid: ccaaf2b6878e35c47a74707367f087e6
 timeCreated: 1476521002
@@ -9,6 +10,23 @@ timeCreated: 1476543456
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
+=======
+guid: 21d1bdc2a2efd48faa31cd2b1d48f6f1
+timeCreated: 1476408933
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Bomberman sprite sheet_0
+    21300002: Bomberman sprite sheet_1
+    21300004: Bomberman sprite sheet_2
+    21300006: Bomberman sprite sheet_3
+    21300008: Bomberman sprite sheet_4
+    21300010: Bomberman sprite sheet_5
+    21300012: Bomberman sprite sheet_6
+    21300014: Bomberman sprite sheet_7
+    21300016: Bomberman sprite sheet_8
+    21300018: Bomberman sprite sheet_9
+>>>>>>> Stashed changes
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,7 +53,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
+<<<<<<< Updated upstream
     aniso: -1
+=======
+    aniso: 16
+>>>>>>> Stashed changes
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -43,20 +65,162 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
+<<<<<<< Updated upstream
   spriteMode: 1
+=======
+  spriteMode: 2
+>>>>>>> Stashed changes
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< Updated upstream
   spritePixelsToUnits: 100
+=======
+  spritePixelsToUnits: 32
+>>>>>>> Stashed changes
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
     serializedVersion: 2
+<<<<<<< Updated upstream
     sprites: []
+=======
+    sprites:
+    - serializedVersion: 2
+      name: Bomberman sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 100
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bomberman sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 101
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bomberman sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 101
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bomberman sprite sheet_3
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 68
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bomberman sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 68
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bomberman sprite sheet_5
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 69
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bomberman sprite sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 34
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bomberman sprite sheet_7
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 34
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bomberman sprite sheet_8
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 36
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bomberman sprite sheet_9
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+>>>>>>> Stashed changes
     outline: []
   spritePackingTag: 
   userData: 
