@@ -20,6 +20,10 @@ public class GenerarMundo : MonoBehaviour {
 			Enemigos();
 			
 		}
+<<<<<<< HEAD
+=======
+		
+>>>>>>> origin/master
 	void Bloquesind ()
 		{
 			for ( int i=0; i<16; i++)
