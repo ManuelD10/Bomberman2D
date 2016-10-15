@@ -20,10 +20,6 @@ public class GenerarMundo : MonoBehaviour {
 			
 		}
 		
-
-		
-
-
 	void Bloquesind ()
 		{
 			for ( int i=0; i<16; i++)
