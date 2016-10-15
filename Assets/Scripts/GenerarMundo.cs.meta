@@ -1,10 +1,16 @@
 fileFormatVersion: 2
 guid: 6c103aa6324400240b271cfd357e2ac0
-timeCreated: 1475893839
+timeCreated: 1476550993
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - PrefabBloqueInd: {fileID: 1000011889632800, guid: f0bb4aece25972446bfb18bba6f3151d,
+      type: 2}
+  - PrefabBloqueDes: {fileID: 1000013327653874, guid: b0998d2ed7f95437d9c9b5aa1f31d272,
+      type: 2}
+  - PrefabEnemigoUno: {fileID: 1000010582460278, guid: 45ea1942dd0704444b45198f15dda1c3,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
