@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class MovBomber : MonoBehaviour {
 
 	private Animator miAnimator;
 	float velocidadMovimiento;
+	int vidasBomber;
+	public Text vidasBomberText;
 	// Use this for initialization
 
 
@@ -12,7 +15,21 @@ public class MovBomber : MonoBehaviour {
 	void Start () 
 	{
 		miAnimator = GetComponent<Animator>();
+		vidasBomber = 3;
+		vidasBomberText.text = vidasBomber.ToString ();
+
 	}
+
+	void OnCollisionEnter2D(Collision2D coll)
+	{
+		if (coll.gameObject.tag == "Enemigo1") 
+		{
+			vidasBomber = vidasBomber - 1;
+			vidasBomberText.text = vidasBomber.ToString ();
+		}	
+		
+	}
+
 
 	// Update is called once per frame
 	void Update () 

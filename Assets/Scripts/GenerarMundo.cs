@@ -20,10 +20,7 @@ public class GenerarMundo : MonoBehaviour {
 			Enemigos();
 			
 		}
-<<<<<<< HEAD
-=======
-		
->>>>>>> origin/master
+
 	void Bloquesind ()
 		{
 			for ( int i=0; i<16; i++)
@@ -46,7 +43,7 @@ public class GenerarMundo : MonoBehaviour {
 
 			while (i < numBloques)
 			{	
-				posDesX = Random.Range(1,31);
+				posDesX = Random.Range(0,30);
 				posDesY = Random.Range (1, 11);
 
 				if (posDesX % 2 != 0)
@@ -55,9 +52,9 @@ public class GenerarMundo : MonoBehaviour {
 				}
 				else
 				{
+				    posDesX = posDesX + 1;
 					posDesY=-2*Random.Range(1,6);
 				}
-
 				var otroBloque = Instantiate (PrefabBloqueDes) as GameObject;
 				otroBloque.transform.SetParent (transform);
 				otroBloque.transform.localPosition = new Vector3 (posDesX, posDesY);
