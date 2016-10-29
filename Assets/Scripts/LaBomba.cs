@@ -11,7 +11,11 @@ public class LaBomba : MonoBehaviour {
 	float posicionExplosionY;
 	void Start ()
 	{
-
+		bomba = GameObject.FindGameObjectWithTag("Bomba").transform;
+		mundo = GameObject.FindGameObjectWithTag("Mundo").transform;
+		posicionBombaX=bomba.transform.localPosition.x;
+		posicionBombaY=bomba.transform.localPosition.y;
+		Invoke("Destruirbomba", 2);
 	}
 
 
@@ -23,14 +27,8 @@ public class LaBomba : MonoBehaviour {
 	}
 	void Update ()
 	{
-		bomba = GameObject.FindGameObjectWithTag("Bomba").transform;
-		mundo = GameObject.FindGameObjectWithTag("Mundo").transform;
-		posicionBombaX=bomba.transform.localPosition.x;
-		posicionBombaY=bomba.transform.localPosition.y;
-		Invoke("Destruirbomba", 10);
-	
-		Debug.Log ("despues");
 
+	
 	}
 	void Destruirbomba()
 	{

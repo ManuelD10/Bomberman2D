@@ -16,7 +16,7 @@ public class CrearBomba : MonoBehaviour {
 	void Start () {
 		bomber = GameObject.FindGameObjectWithTag("Player").transform;
 		numBombas=0;
-		maxBombas=10;
+		maxBombas=9999;
 	
 	}
 

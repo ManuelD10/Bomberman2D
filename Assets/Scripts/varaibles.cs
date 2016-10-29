@@ -2,11 +2,11 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class MovBomber : MonoBehaviour {
+public class varaibles : MonoBehaviour {
 
 	private Animator miAnimator;
 	float velocidadMovimiento;
-	public int vidasBomber;
+	int vidasBomber;
 	public Text vidasBomberText;
 	public float minPosX;
 	public float minPosY;
@@ -21,6 +21,10 @@ public class MovBomber : MonoBehaviour {
 	void Start () 
 	{
 
+		minPosX = .9f;
+		minPosY=-.9f;
+		maxPosX=31.1f;
+		maxPosY=-11.1f;
 		miAnimator = GetComponent<Animator>();
 		vidasBomber = 3;
 		vidasBomberText.text = vidasBomber.ToString ();
@@ -32,12 +36,7 @@ public class MovBomber : MonoBehaviour {
 		if (coll.gameObject.tag == "Enemigo1") 
 		{
 			vidasBomber = vidasBomber - 1;
-
-		}
-		if (coll.gameObject.tag == "explosion") 
-		{
-			vidasBomber = vidasBomber - 1;
-		
+			vidasBomberText.text = vidasBomber.ToString ();
 		}	
 
 	}
@@ -48,7 +47,6 @@ public class MovBomber : MonoBehaviour {
 	public Vector3 direction;
 	void Update () 
 	{
-		vidasBomberText.text = vidasBomber.ToString ();
 		// Movimiento a la derecha
 		if (Input.GetKeyDown (KeyCode.RightArrow)) 
 		{
@@ -157,6 +155,10 @@ public class MovBomber : MonoBehaviour {
 		BombermanY =transform.position.y;
 		transform.position += movimiento * velocidadMovimiento * Time.deltaTime;
 
+//		if ((BombermanX > minPosX) && (BombermanX < maxPosX) && (BombermanY < minPosY ) && (BombermanY > maxPosY ))
+//		{
+//			transform.position += movimiento * velocidadMovimiento * Time.deltaTime;
+//		}
 			
 		
 			
