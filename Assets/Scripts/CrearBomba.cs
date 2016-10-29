@@ -27,14 +27,20 @@ public class CrearBomba : MonoBehaviour {
 		posicionBomberX=bomber.transform.localPosition.x;
 		posicionBomberY=bomber.transform.localPosition.y;
 
-		if (Input.GetKeyDown (KeyCode.Z) && (numBombas<maxBombas) )
-		{	
-			var laBomba = Instantiate (Bomba) as GameObject;
-			laBomba.transform.SetParent (transform);
-			posicionBombaX= Mathf.Round (posicionBomberX);
-			posicionBombaY= Mathf.Round (posicionBomberY);
-			laBomba.transform.localPosition = new Vector3 (posicionBombaX, posicionBombaY);
-			numBombas=numBombas+1;
+        if (Input.GetKeyDown(KeyCode.Z) && (numBombas < maxBombas))
+        {
+            var laBomba = Instantiate(Bomba) as GameObject;
+            laBomba.transform.SetParent(transform);
+            posicionBombaX = Mathf.Round(posicionBomberX);
+            posicionBombaY = Mathf.Round(posicionBomberY);
+            laBomba.transform.localPosition = new Vector3(posicionBombaX, posicionBombaY);
+            numBombas = numBombas + 1;
+            GetComponent<AudioSource>().UnPause();
+        }
+        else
+        {
+            GetComponent<AudioSource>().Pause(); 
+        
 		}
 		
 	}

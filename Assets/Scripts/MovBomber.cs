@@ -14,6 +14,7 @@ public class MovBomber : MonoBehaviour {
 	public float maxPosY;
 	public float BombermanX;
 	public float BombermanY;
+    public AudioSource audioCaminar;
 	// Use this for initialization
 
 
@@ -48,17 +49,18 @@ public class MovBomber : MonoBehaviour {
 	public Vector3 direction;
 	void Update () 
 	{
+        HacerSonidoCaminar(); 
 		vidasBomberText.text = vidasBomber.ToString ();
 		// Movimiento a la derecha
 		if (Input.GetKeyDown (KeyCode.RightArrow)) 
 		{
 			if (miAnimator.GetBool("caminarDerecha") == true)
 			{
-				miAnimator.SetBool ("caminarDerecha", false);
+				miAnimator.SetBool ("caminarDerecha", false);                                 
 			}
 			else
 			{
-				miAnimator.SetBool ("caminarDerecha", true);
+				miAnimator.SetBool ("caminarDerecha", true);                           
 			}
 		}
 
@@ -66,12 +68,12 @@ public class MovBomber : MonoBehaviour {
 		{
 			if (miAnimator.GetBool("caminarDerecha") == true)
 			{
-				miAnimator.SetBool ("caminarDerecha", false);
-			}
+				miAnimator.SetBool ("caminarDerecha", false);                
+            }
 			else
 			{
-				miAnimator.SetBool ("caminarDerecha", true);
-			}
+				miAnimator.SetBool ("caminarDerecha", true);               
+            }
 		}
 
 		// Movimiento a la izquierda
@@ -79,24 +81,24 @@ public class MovBomber : MonoBehaviour {
 		{
 			if (miAnimator.GetBool("caminarIzquierda") == true)
 			{
-				miAnimator.SetBool ("caminarIzquierda", false);
-			}
+				miAnimator.SetBool ("caminarIzquierda", false);                
+            }
 			else
 			{
-				miAnimator.SetBool ("caminarIzquierda", true);
-			}
+				miAnimator.SetBool ("caminarIzquierda", true);               
+            }
 		}
 
 		if (Input.GetKeyUp (KeyCode.LeftArrow)) 
 		{
 			if (miAnimator.GetBool("caminarIzquierda") == true)
 			{
-				miAnimator.SetBool ("caminarIzquierda", false);
-			}
+				miAnimator.SetBool ("caminarIzquierda", false);               
+            }
 			else
 			{
-				miAnimator.SetBool ("caminarIzquierda", true);
-			}
+				miAnimator.SetBool ("caminarIzquierda", true);               
+            }
 		}
 
 		// Movimiento abajo
@@ -104,24 +106,24 @@ public class MovBomber : MonoBehaviour {
 		{
 			if (miAnimator.GetBool("caminarAbajo") == true)
 			{
-				miAnimator.SetBool ("caminarAbajo", false);
-			}
+				miAnimator.SetBool ("caminarAbajo", false);               
+            }
 			else
 			{
-				miAnimator.SetBool ("caminarAbajo", true);
-			}
+				miAnimator.SetBool ("caminarAbajo", true);               
+            }
 		}
 
 		if (Input.GetKeyUp (KeyCode.DownArrow)) 
 		{
 			if (miAnimator.GetBool("caminarAbajo") == true)
 			{
-				miAnimator.SetBool ("caminarAbajo", false);
-			}
+				miAnimator.SetBool ("caminarAbajo", false);                
+            }
 			else
 			{
-				miAnimator.SetBool ("caminarAbajo", true);
-			}
+				miAnimator.SetBool ("caminarAbajo", true);                
+            }
 		}
 
 		// Movimiento arriba
@@ -129,24 +131,24 @@ public class MovBomber : MonoBehaviour {
 		{
 			if (miAnimator.GetBool("caminarArriba") == true)
 			{
-				miAnimator.SetBool ("caminarArriba", false);
-			}
+				miAnimator.SetBool ("caminarArriba", false);                
+            }
 			else
 			{
-				miAnimator.SetBool ("caminarArriba", true);
-			}
+				miAnimator.SetBool ("caminarArriba", true);                
+            }
 		}
 
 		if (Input.GetKeyUp (KeyCode.UpArrow)) 
 		{
 			if (miAnimator.GetBool("caminarArriba") == true)
 			{
-				miAnimator.SetBool ("caminarArriba", false);
-			}
+				miAnimator.SetBool ("caminarArriba", false);                
+            }
 			else
 			{
-				miAnimator.SetBool ("caminarArriba", true);
-			}
+				miAnimator.SetBool ("caminarArriba", true);                
+            }
 		}
 	}
 
@@ -155,10 +157,19 @@ public class MovBomber : MonoBehaviour {
 		var movimiento = new Vector3(Mathf.Round(Input.GetAxis("Horizontal")), Mathf.Round(Input.GetAxis("Vertical")), 0);
 		BombermanX =transform.position.x;
 		BombermanY =transform.position.y;
-		transform.position += movimiento * velocidadMovimiento * Time.deltaTime;
-
-			
-		
-			
+		transform.position += movimiento * velocidadMovimiento * Time.deltaTime;		
 	}
+    void HacerSonidoCaminar()
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) ||
+            Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            audioCaminar.Play();
+        }
+        if (!Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.LeftArrow)
+            && !Input.GetKey(KeyCode.RightArrow))
+        {
+            audioCaminar.Stop();
+        }  
+    }
 }

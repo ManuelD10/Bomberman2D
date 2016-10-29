@@ -27,8 +27,8 @@ public class Explosion : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		
-		x = (int)transform.position.x;
+        GetComponent<AudioSource>();
+        x = (int)transform.position.x;
 		x = Mathf.RoundToInt (x);
 		y = (int)transform.position.y;
 		y = Mathf.RoundToInt (y);
@@ -36,7 +36,7 @@ public class Explosion : MonoBehaviour {
 		Destroy(GameObject.FindGameObjectWithTag("explosion"),.8f);
 		evaluador();
 		onda ();
-
+        
 
 	}
 
